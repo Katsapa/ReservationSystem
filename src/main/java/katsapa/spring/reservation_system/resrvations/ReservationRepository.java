@@ -1,6 +1,7 @@
 package katsapa.spring.reservation_system.resrvations;
 
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -30,6 +31,7 @@ public interface ReservationRepository extends JpaRepository<ReservationEntity, 
             @Param("status") ReservationStatus status,
             @Param("id") Long id
     );
+
     @Query("""
         SELECT r.id from ReservationEntity r
                 where r.roomId = :roomId
@@ -42,5 +44,16 @@ public interface ReservationRepository extends JpaRepository<ReservationEntity, 
             @Param("startDate") LocalDate startDate,
             @Param("endDate") LocalDate endDate,
             @Param("status") ReservationStatus status
+    );
+
+    @Query("""
+        SELECT r from ReservationEntity r
+                where (:roomId IS NULL OR r.roomId = :roomId)
+                AND (:userId IS NULL OR :userId = r.userId)
+        """)
+    List<ReservationEntity> searchAllByFilter(
+            @Param("roomId") Long roomId,
+            @Param("userId") Long userId,
+            Pageable pageable
     );
 }

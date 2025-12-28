@@ -3,6 +3,7 @@ package katsapa.spring.reservation_system.resrvations;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -26,8 +27,20 @@ public class ReservationService {
         return mapper.toDomain(reservationEntity);
     }
 
-    public List<Reservation> findAllReservations() {
-        List<ReservationEntity> allReservations = repository.findAll();
+    public List<Reservation> searchAllByFilter(
+            ReservationSearchFilter filter
+    ) {
+        int pageSize = filter.pageSize() != null ? filter.pageSize() : 10;
+
+        int pageNumber = filter.pageNumber() != null ? filter.pageNumber() : 0;
+
+        Pageable pageable = Pageable.ofSize(pageSize).withPage(pageNumber);
+
+        List<ReservationEntity> allReservations = repository.searchAllByFilter(
+                filter.roomId(),
+                filter.userId(),
+                pageable
+        );
         return allReservations.stream()
                 .map(mapper::toDomain)
                 .toList();
