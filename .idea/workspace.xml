@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5590a2c3-0651-420d-8ff1-40ce328da3c5" name="Changes" comment="Update With Reservation mapper">
-      <change afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/ReservationSearchFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/checksums/checksums.lock" afterDir="false" />
+    <list default="true" id="5590a2c3-0651-420d-8ff1-40ce328da3c5" name="Changes" comment="page-by-page selection">
+      <change afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/availability/AvailabilityStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/availability/CheckAvailabilityRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/availability/CheckAvailabilityResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/availability/ReservationAvailabilityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/availability/ReservationAvailabilityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/ReservationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/katsapa/spring/reservation_system/resrvations/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,9 +50,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -133,6 +134,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="katsapa.spring.reservation_system.resrvations.availability" />
       <recent name="katsapa.spring.reservation_system" />
     </key>
   </component>
@@ -212,7 +214,9 @@
       <workItem from="1766870054252" duration="534000" />
       <workItem from="1766870605578" duration="1986000" />
       <workItem from="1766876316780" duration="4307000" />
-      <workItem from="1766917715976" duration="5560000" />
+      <workItem from="1766917715976" duration="7919000" />
+      <workItem from="1767019279593" duration="1734000" />
+      <workItem from="1767190927851" duration="4810000" />
     </task>
     <task id="LOCAL-00001" summary="Commit push">
       <option name="closed" value="true" />
@@ -262,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766880466333</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="page-by-page selection">
+      <option name="closed" value="true" />
+      <created>1766943478457</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1766943478457</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +309,7 @@
     <MESSAGE value="Push commit" />
     <MESSAGE value="Commit" />
     <MESSAGE value="Update With Reservation mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update With Reservation mapper" />
+    <MESSAGE value="page-by-page selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="page-by-page selection" />
   </component>
 </project>
